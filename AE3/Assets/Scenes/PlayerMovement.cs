@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject Player;
     public GameObject Balls;
     public GameObject Eyes;
+    public GameObject Particle;
     public float MoveSpeed;
     public float YDistance;
     private float myTime;
@@ -67,7 +68,8 @@ public class PlayerMovement : MonoBehaviour {
             if (LightningTime >= 0.5f)
             {               
                 Ani.SetActive(false);                
-                Ani.GetComponent<Animator>().SetBool("Lightning", false);                
+                Ani.GetComponent<Animator>().SetBool("Lightning", false);
+                Particle.SetActive(false);
                 Strike = false;
               
                 LightningTime = 0;
@@ -81,8 +83,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Strike == false)
             {
-                
                 Strike = true;
+                Particle.SetActive(true);
             }
         }      
         if (Input.GetKeyDown(KeyCode.Space))
