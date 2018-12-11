@@ -44,6 +44,11 @@ public class AttackScript : MonoBehaviour {
                 _damage = 10;
                 healthCalculation();
             }
+            else if (Target.gameObject.CompareTag("Firebolt"))
+            {
+                _damage = 1;
+                healthCalculation();
+            }
             else if (Target.gameObject.CompareTag("Doom"))
             {
                 DoomActive = true;

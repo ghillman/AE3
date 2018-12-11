@@ -15,7 +15,9 @@ public class ImpBehaviour : MonoBehaviour {
     private float _ImpJumpSpeed;
     public float ImpJumpSpeed;
     public float AgroDistance;
-    
+    public GameObject Firebolt;
+    public float BoltSpeed;
+    private float _BoltSpeed;
 	// Use this for initialization
 	void Start () {
 
@@ -34,6 +36,7 @@ public class ImpBehaviour : MonoBehaviour {
 
         _MoveSpeed = MoveSpeed * Time.deltaTime;
         _ImpJumpSpeed = ImpJumpSpeed * Time.deltaTime;
+        _BoltSpeed = BoltSpeed * Time.deltaTime;
         if (Contact == false)
             {
             if (PlayerLocation() > FollowDistance)
@@ -63,7 +66,7 @@ public class ImpBehaviour : MonoBehaviour {
         }
 
         RaycastHit2D Target =
-        Physics2D.Linecast(transform.position - new Vector3(AgroDistance, 0, 0), transform.position + new Vector3(AgroDistance, 0, 0));
+        Physics2D.Raycast(transform.position - new Vector3(AgroDistance, 0, 0), transform.position + new Vector3(AgroDistance, 0, 0));
 
         Debug.DrawLine(transform.position - new Vector3(AgroDistance, 0, 0), transform.position + new Vector3(AgroDistance, 0,0), Color.blue);
 
@@ -72,7 +75,18 @@ public class ImpBehaviour : MonoBehaviour {
         {
             if (Target.collider.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("Hello");
+                Debug.Log("Hello0");
+                Firebolt.AddComponent<Rigidbody2D>();
+                if (Target.collider.gameObject.transform.position.x > transform.position.x)
+                {
+                    Debug.Log("Hello1");
+                    Firebolt.GetComponent<Rigidbody2D>().velocity = new Vector2(_BoltSpeed, Firebolt.GetComponent<Rigidbody2D>().velocity.y);
+                }
+                else
+                {
+                    Debug.Log("Hello2");
+                    Firebolt.GetComponent<Rigidbody2D>().velocity = new Vector2(-_BoltSpeed, Firebolt.GetComponent<Rigidbody2D>().velocity.y);
+                }
             }
         }
     }

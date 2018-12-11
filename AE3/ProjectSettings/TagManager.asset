@@ -12,6 +12,7 @@ TagManager:
   - Node
   - Ground
   - Dead
+  - Firebolt
   layers:
   - Default
   - TransparentFX
