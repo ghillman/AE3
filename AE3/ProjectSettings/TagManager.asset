@@ -7,6 +7,11 @@ TagManager:
   - Lightning
   - Enemy
   - LightningParticle
+  - BigAttack
+  - Doom
+  - Node
+  - Ground
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -16,12 +21,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Node
+  - Attack
+  - Enemy
+  - Imp
   - 
   - 
   - 

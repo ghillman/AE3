@@ -59,8 +59,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Enemies\DummyBehaviour.cs" />
-    <Compile Include="Assets\Scenes\PlayerMovement.cs" />
+    <Compile Include="Assets\Scenes\Scripts\AttackScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Doom.cs" />
+    <Compile Include="Assets\Scenes\Scripts\DummyBehaviour.cs" />
+    <Compile Include="Assets\Scenes\Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scenes\Scripts\FingerOfDeath.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Goblin.cs" />
+    <Compile Include="Assets\Scenes\Scripts\LightningAttack.cs" />
+    <Compile Include="Assets\Scenes\Scripts\PlayerDamage.cs" />
+    <Compile Include="Assets\Scenes\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scenes\Scripts\PlayerState.cs" />
+    <Compile Include="Assets\Scenes\Scripts\PortalFader.cs" />
+    <Compile Include="Assets\Scenes\Scripts\PortalScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\StartScript.cs" />
+    <Compile Include="Assets\Scenes\Warlock\Imp\ImpBehaviour.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/GitHub/aaaaaaaaaaa/AE3/AE3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
