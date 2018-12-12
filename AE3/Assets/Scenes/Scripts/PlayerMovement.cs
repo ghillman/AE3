@@ -6,16 +6,17 @@ public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody2D PlayerRigid;
     public GameObject Player;
-    public GameObject Balls;
+    public GameObject Balls; //objects floating above player
     public GameObject Eyes;   
     public GameObject JumpParticals;
     public GameObject BigAttack;
+
     public float MoveSpeed;
     public float YDistance;
     private float myTime;
     private float BigAttackCharge = 0;
 
-    public bool Hit;
+    public bool Hit; //changed in PlayerDamage script
     public float HitCounter;
    
     public float JumpHeight;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
     public float RayCastDown;
     public float BigAttackCooldown;
     public float BigAttackSize;
-    public float BigAttackTime;
+    public float BigAttackTime; //this is just 0
   
     private Animator Animated;
     
@@ -37,7 +38,6 @@ public class PlayerMovement : MonoBehaviour {
         HitCounter = 0;
     }
 
-    // Update is called once per frame
     void Update() {
         if (Hit)
         {
@@ -61,10 +61,11 @@ public class PlayerMovement : MonoBehaviour {
     }
     void BigAttackFunck()
     {
-
+        //Scales up the collider of the Big Attack
         Transform BigAttackCollider = BigAttack.transform.GetChild(0).transform;
         BigAttackSize += 0.1f;
         BigAttackCollider.localScale = new Vector2(BigAttackSize, BigAttackSize);
+
         BigAttackCharge += Time.deltaTime;
         if (BigAttackCharge >= BigAttackCooldown)
         {
@@ -80,8 +81,10 @@ public class PlayerMovement : MonoBehaviour {
     
     void Movement()
     {
+        //Big Attack
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+            //displays attack and then disperses it
             if (BigAttackBool == false)
             {
                 BigAttackBool = true;
@@ -91,7 +94,7 @@ public class PlayerMovement : MonoBehaviour {
                 BigAttackCollider.localScale = new Vector2(BigAttackSize, BigAttackSize);
             }
         }
-          
+        //Jump  
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Physics2D.Linecast(transform.position, transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
@@ -101,6 +104,7 @@ public class PlayerMovement : MonoBehaviour {
                 JumpParticals.SetActive(true);
             }
         }
+        //side to side Movement
         if (Hit == false)
         {
             if (Input.GetKeyUp(KeyCode.A))
@@ -121,6 +125,7 @@ public class PlayerMovement : MonoBehaviour {
                 Balls.GetComponent<SpriteRenderer>().flipX = true;
                 Eyes.GetComponent<SpriteRenderer>().flipX = true;
                 Eyes.transform.position = new Vector2(Player.transform.position.x - 0.16f, Player.transform.position.y + 0.43f);
+                //Rotates origin of attack
                 BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
 
 
