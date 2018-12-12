@@ -133,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1079855992305848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.8, y: -0.29, z: 0}
+  m_LocalPosition: {x: 32, y: 3.11, z: 0}
   m_LocalScale: {x: 0.9661721, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4981794815408498}
@@ -146,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1348576577967872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.200005, y: 0.16999997, z: 0}
+  m_LocalPosition: {x: 52.5, y: 3.33, z: 0}
   m_LocalScale: {x: 4.7058644, y: 1, z: 1}
   m_Children:
   - {fileID: 4160442684113614}
@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319749275787536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.974726, y: -2.7932472, z: 0}
+  m_LocalPosition: {x: 30.42, y: -2.76, z: 0}
   m_LocalScale: {x: 0.12750056, y: 1.475, z: 1}
   m_Children:
   - {fileID: 4975537885649736}
@@ -4991,7 +4991,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 989836d12d6340a4daa636fbe7b7743c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

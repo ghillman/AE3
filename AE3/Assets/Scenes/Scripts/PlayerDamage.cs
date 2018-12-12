@@ -37,7 +37,12 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 0;
 
             }
-           if(Target.gameObject.transform.position.x < transform.position.x)
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Cloud")
+            {
+                _Damage = 5;
+
+            }
+            if (Target.gameObject.transform.position.x < transform.position.x)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = 
                 new Vector2(newknockback, newknockback);
