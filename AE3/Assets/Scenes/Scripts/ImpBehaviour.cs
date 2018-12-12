@@ -23,8 +23,8 @@ public class ImpBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        transform.position = Warlock.transform.position;
-        
+
+        Warlock = GameObject.FindGameObjectWithTag("Player");
         castTimer = 0;
 	}
 	
