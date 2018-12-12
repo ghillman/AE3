@@ -16,6 +16,7 @@ TagManager:
   - Point
   - Rotor
   - Point2
+  - Imp
   layers:
   - Default
   - TransparentFX

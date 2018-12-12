@@ -7,7 +7,7 @@ public class Goblin : MonoBehaviour {
     private bool leftandright;
     public float GoblinMoveSpeed;
     public float GoblinJump;
-    private bool Alive;
+    
     public float RayCastDown;
     public float RayCastSide;
     // Use this for initialization
@@ -27,7 +27,7 @@ public class Goblin : MonoBehaviour {
 
         Debug.DrawLine(transform.position, transform.position + new Vector3(-RayCastSide, 0, 0), Color.yellow);
 
-        //Alive = GetComponent<AttackScript>().Alive;
+        
         GoblinSpeed = GoblinMoveSpeed * Time.deltaTime;
         GoblinJumpSpeed = GoblinJump * Time.deltaTime;
         if (GetComponent<AttackScript>().Alive == true)

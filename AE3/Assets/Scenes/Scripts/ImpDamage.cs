@@ -55,4 +55,11 @@ public class ImpDamage : MonoBehaviour {
             ImpHealth -= 1;
         }
     }
+    private void OnTriggerEnter2D(Collider2D Target)
+    {
+        if (Target.gameObject.CompareTag("Enemy"))
+        {
+            ImpHealth -= 1;
+        }
+    }
 }
