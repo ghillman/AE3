@@ -37,7 +37,7 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 0;
 
             }
-            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Cloud")
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "AirBomb")
             {
                 _Damage = 5;
 
@@ -47,6 +47,13 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 2;
 
             }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "FireCloud")
+            {
+                _Damage = 2;
+
+            }
+            
+
             if (Target.gameObject.transform.position.x < transform.position.x)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = 
@@ -62,6 +69,21 @@ public class PlayerDamage : MonoBehaviour {
             
         }
     }
+    private void OnTriggerEnter2D(Collider2D Target)
+    {
+        if(Target.gameObject.CompareTag("Enemy"))
+        {
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "FireBall")
+            {
+                _Damage = 2;
+
+            }
+            PlayerState.PlayerHealth -= _Damage;
+            Debug.Log(PlayerState.PlayerHealth);
+        }
+    }
+
+
 
 
 }
