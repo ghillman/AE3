@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scenes\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\FingerOfDeath.cs" />
     <Compile Include="Assets\Scenes\Scripts\Firebolt.cs" />
+    <Compile Include="Assets\Scenes\Scripts\FlamePlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Goblin.cs" />
     <Compile Include="Assets\Scenes\Scripts\ImpBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\ImpDamage.cs" />
