@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5196da46cef49f849a9450d54bbab733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playerhealth: 10
+  Playerhealth: 4
   Playerlevel: 1
   StartLevel: 1
 --- !u!4 &2043390679

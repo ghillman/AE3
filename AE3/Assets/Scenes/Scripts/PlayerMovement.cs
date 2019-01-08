@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviour {
             BigAttack.SetActive(false);
         }
     }
+        
     
     void Movement()
     {

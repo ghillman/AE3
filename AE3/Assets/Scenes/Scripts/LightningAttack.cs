@@ -7,11 +7,13 @@ public class LightningAttack : MonoBehaviour {
     public float LightningTime;
     public float Rechargetime;
     public GameObject Particle;
-    public GameObject Ani;
+    //public GameObject Ani;
+
+    private BoxCollider2D Box;
+
     // Use this for initialization
     void Start () {
         LightningTime = 0;
-        Ani = GameObject.FindGameObjectWithTag("Lightning");
         
     }
 	
@@ -46,16 +48,18 @@ public class LightningAttack : MonoBehaviour {
         Rechargetime += Time.deltaTime;
         if (Rechargetime >= 1)
         {
-            Ani.GetComponent<SpriteRenderer>().enabled = true;
-            Ani.GetComponent<BoxCollider2D>().enabled = true;
-            Ani.GetComponent<Animator>().SetBool("Lightning", true);
+            GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
+            
+            GetComponent<Animator>().SetBool("Lightning", true);
 
             LightningTime += Time.deltaTime;
             if (LightningTime >= 0.5f)
             {
-                Ani.GetComponent<SpriteRenderer>().enabled = false;
-                Ani.GetComponent<BoxCollider2D>().enabled = false;
-                Ani.GetComponent<Animator>().SetBool("Lightning", false);
+                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
+                
+                GetComponent<Animator>().SetBool("Lightning", false);
                 Particle.SetActive(false);
                 Strike = false;
                 LightningTime = 0;

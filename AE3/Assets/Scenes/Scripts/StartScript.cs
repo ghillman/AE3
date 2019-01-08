@@ -13,9 +13,11 @@ public class StartScript : MonoBehaviour {
         PlayerState.PlayerHealth = Playerhealth;
         PlayerState.PlayerLevel = Playerlevel;
         PlayerState.Level = StartLevel;
+
         Debug.Log(PlayerState.PlayerHealth);
         Debug.Log(PlayerState.PlayerLevel);
         Debug.Log(PlayerState.Level);
+
         SceneManager.LoadScene("Level_1");
 	}
 

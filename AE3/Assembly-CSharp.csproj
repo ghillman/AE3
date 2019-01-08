@@ -64,8 +64,10 @@
     <Compile Include="Assets\Scenes\Scripts\AirBomb.cs" />
     <Compile Include="Assets\Scenes\Scripts\AttackScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scenes\Scripts\ChestScrimp.cs" />
     <Compile Include="Assets\Scenes\Scripts\CloudBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\Doom.cs" />
+    <Compile Include="Assets\Scenes\Scripts\DropItem.cs" />
     <Compile Include="Assets\Scenes\Scripts\DummyBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\FingerOfDeath.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\Scenes\Scripts\ImpBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\ImpDamage.cs" />
     <Compile Include="Assets\Scenes\Scripts\InsainCloudRotorMovement.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Level6TriggerPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\LightningAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scenes\Scripts\PlayerMovement.cs" />
@@ -84,10 +87,10 @@
     <Compile Include="Assets\Scenes\Scripts\SpawnImp.cs" />
     <Compile Include="Assets\Scenes\Scripts\StartScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>E:/GitHub/aaaaaaaaaaa/AE3/AE3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/3HILLG70/Downloads/AE3/AE3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/GitHub/aaaaaaaaaaa/AE3/AE3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/3HILLG70/Downloads/AE3/AE3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -262,9 +265,6 @@
     </Reference>
     <Reference Include="Unity.Locator">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

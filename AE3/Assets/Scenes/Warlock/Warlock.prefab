@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 95714105370642020}
   - component: {fileID: 61110764144433860}
   - component: {fileID: 114153895042123578}
+  - component: {fileID: 50047790836968550}
   m_Layer: 11
   m_Name: Lightning1
   m_TagString: Lightning
@@ -246,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4998282345022740}
   - component: {fileID: 68537968982765274}
+  - component: {fileID: 50545183447037382}
   m_Layer: 11
   m_Name: New Piskel (1)
   m_TagString: BigAttack
@@ -452,7 +454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100652455965978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.521263, y: 1.7686158, z: -0.82}
+  m_LocalPosition: {x: -5, y: -3.0204597, z: -0.82}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 4575531588737264}
@@ -479,6 +481,46 @@ Transform:
   m_Father: {fileID: 4713263453885042}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
+--- !u!50 &50047790836968550
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1478932738417916}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!50 &50545183447037382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912719978721412}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &50825351038526374
 Rigidbody2D:
   serializedVersion: 4
@@ -781,7 +823,6 @@ MonoBehaviour:
   LightningTime: 0
   Rechargetime: 0
   Particle: {fileID: 1369289665179186}
-  Ani: {fileID: 1478932738417916}
 --- !u!114 &114414187250966770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -794,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockback: 300
+  dead: 0
 --- !u!114 &114447972291856262
 MonoBehaviour:
   m_ObjectHideFlags: 1

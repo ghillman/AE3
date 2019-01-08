@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //script for knocking back player and dealing damage toe them
 public class PlayerDamage : MonoBehaviour {
@@ -9,14 +10,26 @@ public class PlayerDamage : MonoBehaviour {
     private int _Damage;
     private string enemy;
     public float knockback;
+    public bool dead;
 
     // Use this for initialization
     void Start () {
 
         health = PlayerState.PlayerHealth;
+        dead = false;
 
 	}
+    private void Update()
+    {
+       if (dead)
+        {
+           
+            Scene level = SceneManager.GetActiveScene();
+            PlayerState.PlayerHealth = 4;
+            SceneManager.LoadScene(level.buildIndex);
+        }
 
+    }
     //Knocksback and deals damage to player depending on enemy it collided with
     private void OnCollisionEnter2D(Collision2D Target)
     {
@@ -68,6 +81,11 @@ public class PlayerDamage : MonoBehaviour {
             Debug.Log(PlayerState.PlayerHealth);
             
         }
+        if (PlayerState.PlayerHealth <= 0)
+        {
+            dead = true;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D Target)
     {
@@ -80,6 +98,14 @@ public class PlayerDamage : MonoBehaviour {
             }
             PlayerState.PlayerHealth -= _Damage;
             Debug.Log(PlayerState.PlayerHealth);
+        }
+        if (Target.gameObject.CompareTag("Hazzard"))
+        {
+            PlayerState.PlayerHealth = 0;
+        }
+        if (PlayerState.PlayerHealth <= 0)
+        {
+            dead = true;
         }
     }
 

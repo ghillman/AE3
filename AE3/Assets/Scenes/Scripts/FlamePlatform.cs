@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlamePlatform : MonoBehaviour {
 
     public float Flame;
-
+    public bool DoubleSpeed;
 	// Use this for initialization
 	void Start () {
         
@@ -17,15 +17,33 @@ public class FlamePlatform : MonoBehaviour {
 	void Update () {
 
         Flame += Time.deltaTime;
-        if(Flame >= 1)
+        
+        if(!DoubleSpeed)
         {
-            GetComponent<SpriteRenderer>().enabled = true;
-            GetComponent<BoxCollider2D>().enabled = true;
-            if(Flame >= 2)
+            if (Flame >= 1)
             {
-                Flame = 0;
-                GetComponent<SpriteRenderer>().enabled = false;
-                GetComponent<BoxCollider2D>().enabled = false;
+                GetComponent<SpriteRenderer>().enabled = true;
+                GetComponent<BoxCollider2D>().enabled = true;
+                if (Flame >= 2)
+                {
+                    Flame = 0;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
+        }
+        else
+        {
+            if (Flame >= 0.5)
+            {
+                GetComponent<SpriteRenderer>().enabled = true;
+                GetComponent<BoxCollider2D>().enabled = true;
+                if (Flame >= 1)
+                {
+                    Flame = 0;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
         }
 	}
