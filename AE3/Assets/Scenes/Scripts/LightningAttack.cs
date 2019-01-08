@@ -26,6 +26,7 @@ public class LightningAttack : MonoBehaviour {
             {
                 Strike = true;
                 Particle.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Lightning");
 
             }
         }
