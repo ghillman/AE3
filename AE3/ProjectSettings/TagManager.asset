@@ -19,6 +19,7 @@ TagManager:
   - Imp
   - Hazzard
   - Chest
+  - Platform
   layers:
   - Default
   - TransparentFX

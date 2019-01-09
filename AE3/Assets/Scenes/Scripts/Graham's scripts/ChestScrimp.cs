@@ -23,6 +23,7 @@ public class ChestScrimp : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Instantiate(Item, transform.position, Quaternion.identity);
+                    spawned = true;
                 }
             }
         }
