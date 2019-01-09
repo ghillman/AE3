@@ -63,12 +63,15 @@
     <Compile Include="Assets\Scenes\Enemies\Fire blob\FireBlobMovement.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\AirBomb.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\AttackScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BouncieBoiScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BreakyboiScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Camera.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ChestScrimp.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\CloudBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Doom.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\DropItem.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\DummyBehaviour.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\eightLevel.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\FingerOfDeath.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Firebolt.cs" />
