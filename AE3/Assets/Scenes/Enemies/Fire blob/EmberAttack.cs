@@ -13,7 +13,7 @@ public class EmberAttack : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {
-        Fireblob = GameObject.Find("Fireblob");
+        Fireblob = GameObject.Find("Fire Blob");
         AssignedParent = true;
         
 
