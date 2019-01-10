@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightningAttack : MonoBehaviour {
-    private bool Strike;
+
+    [HideInInspector]
+    public bool Strike;
     public float LightningTime;
     public float Rechargetime;
     public GameObject Particle;

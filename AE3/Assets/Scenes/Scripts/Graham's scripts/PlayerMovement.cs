@@ -13,21 +13,23 @@ public class PlayerMovement : MonoBehaviour {
 
     public float MoveSpeed;
     public float YDistance;
-    private float myTime;
-    private float BigAttackCharge = 0;
+    [HideInInspector]
+    public float myTime;
+    [HideInInspector]
+    public float BigAttackCharge = 0;
 
     public bool Hit; //changed in PlayerDamage script
     public float HitCounter;
    
     public float JumpHeight;
-    
-    private bool BigAttackBool;
+    [HideInInspector]
+    public bool BigAttackBool;
     public float RayCastDown;
     public float BigAttackCooldown;
     public float BigAttackSize;
     public float BigAttackTime; //this is just 0
-  
-    private Animator Animated;
+    [HideInInspector]
+    public Animator Animated;
     
     // Use this for initialization
     void Start() {
