@@ -22,16 +22,6 @@ public class LightningAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (Strike == false)
-            {
-                Strike = true;
-                Particle.SetActive(true);
-                FindObjectOfType<AudioManager>().Play("Lightning");
-
-            }
-        }
         if (Strike)
         {
             LightningStrike();
