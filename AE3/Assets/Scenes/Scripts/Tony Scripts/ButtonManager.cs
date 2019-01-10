@@ -5,33 +5,86 @@ using UnityEngine;
 public class ButtonManager : MonoBehaviour
 {
     private float RayCastDown;
-
+    public bool LeftButton;
+    public bool RightButton;
     private Animator Animated;
+    private bool MovingLeft = false;
+    private bool MovingRight = false;
+    private bool stopleft;
+    private bool stopright;
+    public Rigidbody2D PlayerRigid;
+    public float MoveSpeed;
+    void Moveleft()
+    {
+        if (LeftButton)
+        {
+            if (MovingLeft)
+            {
+                //move the player
+                if (PlayerRigid.gameObject.GetComponent<PlayerMovement>().Hit == false)
+                {
+                    PlayerRigid.velocity = new Vector2(-MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+                    Debug.Log("Hello");
+                    Debug.Log(MoveSpeed);
+                    stopleft = true;
+                }
+            }
+            else if(stopleft && !MovingLeft)
+            {
+                PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+                Debug.Log("good bye");
+                stopleft = false;
+            }
+        }
+    }
+    void MoveRight()
+    {
+        if (RightButton)
+        {
+            if (MovingRight)
+            {
+                if (PlayerRigid.gameObject.GetComponent<PlayerMovement>().Hit == false)
+                {
+                    //move the player
+                    PlayerRigid.velocity = new Vector2(MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+                    Debug.Log(MoveSpeed);
+                    stopright = true;
+                }
+            }
+            else if (stopright && !MovingRight)
+            {
+                PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+                stopright = false;
+            }
+        }
+    }
 
+    private void Update()
+    {
 
+        Moveleft();
+        MoveRight();
+        
+    }
     public void Jump(Rigidbody2D Player)
     {
         //draw raycast
-        Debug.DrawLine(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
+       
         //if raycast hits ground allow player to jump
         if (Physics2D.Linecast(Player.transform.position, transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
         {
-            Player.velocity = new Vector2(0, FindObjectOfType<PlayerMovement>().JumpHeight * Time.deltaTime);
+            Player.velocity = new Vector2(Player.velocity.x, FindObjectOfType<PlayerMovement>().JumpHeight * Time.deltaTime);
             //play animations
             FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(false);
             FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(true);
         }
+        
     }
-
-    private bool Moving = false;
 
     public void Left(PlayerMovement Player)
     {
-        if (!Moving)
+        if (!MovingLeft)
         {
-            Player.PlayerRigid.velocity = new Vector2(0, Player.PlayerRigid.velocity.y);
-            //move the player
-            Player.PlayerRigid.velocity = new Vector2((Player.MoveSpeed * -1) * Player.myTime, Player.PlayerRigid.velocity.y);
             //play animation
             Player.Animated.SetFloat("Moving", 1);
             //flip sprites
@@ -43,22 +96,21 @@ public class ButtonManager : MonoBehaviour
             //Rotates origins of attacks
             Player.BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
             FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(-2, 2);
-            Moving = true;
+
+            MovingLeft = true;
         }
         else
         {
-            Player.PlayerRigid.velocity = new Vector2(0, Player.PlayerRigid.velocity.y);
-            Moving = false;
+           
+            MovingLeft = false;
         }
 
     }
 
     public void Right(PlayerMovement Player)
     {
-        if (!Moving)
+        if (!MovingRight)
         {
-            //move the player
-            Player.PlayerRigid.velocity = new Vector2((Player.MoveSpeed * 1) * Player.myTime, Player.PlayerRigid.velocity.y);
             //play animation
             Player.Animated.SetFloat("Moving", 1);
             //flip the sprites
@@ -70,12 +122,13 @@ public class ButtonManager : MonoBehaviour
             //Rotates origins of attacks
             Player.BigAttack.transform.rotation = Quaternion.Euler(0, 90, 90);
             FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(2, 2);
-            Moving = true;
+
+            MovingRight = true;
         }
         else
         {
-            Player.PlayerRigid.velocity = new Vector2(0, Player.PlayerRigid.velocity.y);
-            Moving = false;
+            
+            MovingRight = false;
         }
 
     }

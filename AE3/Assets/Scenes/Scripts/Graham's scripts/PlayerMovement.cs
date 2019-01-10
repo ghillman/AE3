@@ -110,40 +110,40 @@ public class PlayerMovement : MonoBehaviour {
         //side to side Movement
         if (Hit == false)
         {
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
-                Animated.SetFloat("Moving", 0);
-            }
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
-                Animated.SetFloat("Moving", 0);
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                PlayerRigid.velocity = new Vector2((MoveSpeed * -1) * myTime, PlayerRigid.velocity.y);
-                Animated.SetFloat("Moving", 1);
-                Player.GetComponent<SpriteRenderer>().flipX = true;
-                Balls.GetComponent<SpriteRenderer>().flipX = true;
-                Eyes.GetComponent<SpriteRenderer>().flipX = true;
-                Eyes.transform.position = new Vector2(Player.transform.position.x - 0.16f, Player.transform.position.y + 0.43f);
-                //Rotates origin of attack
-                BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
+            //if (Input.GetKeyUp(KeyCode.A))
+            //{
+            //    PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+            //    Animated.SetFloat("Moving", 0);
+            //}
+            //if (Input.GetKeyUp(KeyCode.D))
+            //{
+            //    PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+            //    Animated.SetFloat("Moving", 0);
+            //}
+            //if (Input.GetKey(KeyCode.A))
+            //{
+            //    PlayerRigid.velocity = new Vector2((MoveSpeed * -1) * myTime, PlayerRigid.velocity.y);
+            //    Animated.SetFloat("Moving", 1);
+            //    Player.GetComponent<SpriteRenderer>().flipX = true;
+            //    Balls.GetComponent<SpriteRenderer>().flipX = true;
+            //    Eyes.GetComponent<SpriteRenderer>().flipX = true;
+            //    Eyes.transform.position = new Vector2(Player.transform.position.x - 0.16f, Player.transform.position.y + 0.43f);
+            //    //Rotates origin of attack
+            //    BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
 
 
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                PlayerRigid.velocity = new Vector2((MoveSpeed) * myTime, PlayerRigid.velocity.y);
-                Animated.SetFloat("Moving", 1);
-                Player.GetComponent<SpriteRenderer>().flipX = false;
-                Balls.GetComponent<SpriteRenderer>().flipX = false;
-                Eyes.transform.position = new Vector2(Player.transform.position.x + 0.16f, Player.transform.position.y + 0.43f);
-                BigAttack.transform.rotation = Quaternion.Euler(0, 90, 90);
+            //}
+            //if (Input.GetKey(KeyCode.D))
+            //{
+            //    PlayerRigid.velocity = new Vector2((MoveSpeed) * myTime, PlayerRigid.velocity.y);
+            //    Animated.SetFloat("Moving", 1);
+            //    Player.GetComponent<SpriteRenderer>().flipX = false;
+            //    Balls.GetComponent<SpriteRenderer>().flipX = false;
+            //    Eyes.transform.position = new Vector2(Player.transform.position.x + 0.16f, Player.transform.position.y + 0.43f);
+            //    BigAttack.transform.rotation = Quaternion.Euler(0, 90, 90);
 
 
-            }
+            //}
         }
     }
     
