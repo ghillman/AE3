@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50450567649303824}
   m_Layer: 8
   m_Name: Moving platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432134286510512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.87, y: -10.03, z: 0}
-  m_LocalScale: {x: 3.8362527, y: 1, z: 1}
+  m_LocalPosition: {x: 22.87, y: -15.646, z: 0}
+  m_LocalScale: {x: 3.8362527, y: 2.8353276, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,8 +78,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5000002, y: 0.48083687}
-  - {x: 0.4943029, y: 0.48083687}
+  - {x: -0.47812977, y: 0.14941457}
+  - {x: 0.47243196, y: 0.14941524}
 --- !u!114 &114152251558539526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
   second: 0
   third: 0
   Last: 0
-  firstDirection: 0
+  firstDirection: 1
   ThirdPlatformCurvature: 0
   moveTime: 1.5
   moveSpeed: 4
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 989836d12d6340a4daa636fbe7b7743c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7827905f94593254abe3377c24e7a035, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b430e60961a832d448ff984876aac98f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
