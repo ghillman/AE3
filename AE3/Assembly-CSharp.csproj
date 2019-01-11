@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ImpDamage.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\InsainCloudRotorMovement.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Level6TriggerPlatform.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\LevelThirteenDoor.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\LightningAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\MagicKey.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\MovingPlatform.cs" />
