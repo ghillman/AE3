@@ -70,7 +70,7 @@ public class ButtonManager : MonoBehaviour
         if (waitBool)
         {
             WaitTime += Time.deltaTime;
-            if (WaitTime >= 0.1f)
+            if (WaitTime >= 0.2f)
             {
                 waitBool = false;
                 WaitTime = 0;
