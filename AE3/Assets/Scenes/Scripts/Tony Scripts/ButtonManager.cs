@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    private float RayCastDown;
+    public float RayCastDown;
     public bool LeftButton;
     public bool RightButton;
     private Animator Animated;
@@ -12,6 +13,8 @@ public class ButtonManager : MonoBehaviour
     private bool MovingRight = false;
     private bool stopleft;
     private bool stopright;
+    private bool waitBool;
+    private float WaitTime;
     public Rigidbody2D PlayerRigid;
     public float MoveSpeed;
     void Moveleft()
@@ -23,7 +26,7 @@ public class ButtonManager : MonoBehaviour
                 //move the player
                 if (PlayerRigid.gameObject.GetComponent<PlayerMovement>().Hit == false)
                 {
-                    PlayerRigid.velocity = new Vector2(-MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+                    PlayerRigid.velocity = new Vector2((MoveSpeed * Time.deltaTime)* -1, PlayerRigid.velocity.y);
                     Debug.Log("Hello");
                     Debug.Log(MoveSpeed);
                     stopleft = true;
@@ -32,8 +35,10 @@ public class ButtonManager : MonoBehaviour
             else if(stopleft && !MovingLeft)
             {
                 PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+                
                 Debug.Log("good bye");
                 stopleft = false;
+                GetComponent<Image>().color = new Color(1, 1, 1, 0.66f);
             }
         }
     }
@@ -46,7 +51,7 @@ public class ButtonManager : MonoBehaviour
                 if (PlayerRigid.gameObject.GetComponent<PlayerMovement>().Hit == false)
                 {
                     //move the player
-                    PlayerRigid.velocity = new Vector2(MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+                    PlayerRigid.velocity = new Vector2((MoveSpeed * Time.deltaTime) * 1, PlayerRigid.velocity.y);
                     Debug.Log(MoveSpeed);
                     stopright = true;
                 }
@@ -55,24 +60,38 @@ public class ButtonManager : MonoBehaviour
             {
                 PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
                 stopright = false;
+                GetComponent<Image>().color = new Color(255, 255, 255, 0.66f);
             }
         }
     }
 
     private void Update()
     {
+        if (waitBool)
+        {
+            WaitTime += Time.deltaTime;
+            if (WaitTime >= 0.1f)
+            {
+                waitBool = false;
+                WaitTime = 0;
+                GetComponent<Image>().color = new Color(1, 1, 1, 0.66f);
+            }
+        }
 
         Moveleft();
         MoveRight();
+        Debug.DrawLine(PlayerRigid.transform.position, PlayerRigid.transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
         
     }
     public void Jump(Rigidbody2D Player)
     {
         //draw raycast
-       
+        GetComponent<Image>().color = new Color(255, 255, 255, 255);
+        waitBool = true;
         //if raycast hits ground allow player to jump
-        if (Physics2D.Linecast(Player.transform.position, transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
+        if (Physics2D.Linecast(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
         {
+            
             Player.velocity = new Vector2(Player.velocity.x, FindObjectOfType<PlayerMovement>().JumpHeight * Time.deltaTime);
             //play animations
             FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(false);
@@ -85,6 +104,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (!MovingLeft)
         {
+            GetComponent<Image>().color = new Color(255, 255, 255, 255);
             //play animation
             Player.Animated.SetFloat("Moving", 1);
             //flip sprites
@@ -101,8 +121,9 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
-           
+            Player.Animated.SetFloat("Moving", 0);
             MovingLeft = false;
+            
         }
 
     }
@@ -111,6 +132,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (!MovingRight)
         {
+            GetComponent<Image>().color = new Color(255, 255, 255, 255);
             //play animation
             Player.Animated.SetFloat("Moving", 1);
             //flip the sprites
@@ -127,7 +149,7 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
-            
+            Player.Animated.SetFloat("Moving", 0);
             MovingRight = false;
         }
 
@@ -135,6 +157,8 @@ public class ButtonManager : MonoBehaviour
 
     public void Lightning()
     {
+        GetComponent<Image>().color = new Color(255, 255, 255, 255);
+        waitBool = true;
         if (FindObjectOfType<LightningAttack>().Strike == false)
         {
             FindObjectOfType<LightningAttack>().Strike = true;
