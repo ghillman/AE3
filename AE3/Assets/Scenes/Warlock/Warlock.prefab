@@ -608,7 +608,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100652455965978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.27, y: -6.05, z: -0.82}
+  m_LocalPosition: {x: 3.51, y: -3.4811897, z: -0.82}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 224735629552626554}
@@ -1052,11 +1052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RayCastDown: -0.8
-  LeftButton: 1
-  RightButton: 0
-  PlayerRigid: {fileID: 50825351038526374}
-  MoveSpeed: 360
+  MovingLeft: 0
+  MovingRight: 0
 --- !u!114 &114153895042123578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,11 +1080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RayCastDown: -0.8
-  LeftButton: 0
-  RightButton: 0
-  PlayerRigid: {fileID: 50825351038526374}
-  MoveSpeed: 360
+  MovingLeft: 0
+  MovingRight: 0
 --- !u!114 &114295269130035068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1135,7 +1129,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 1
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 3
@@ -1143,7 +1137,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114153287569316746}
-          m_MethodName: Left
+          m_MethodName: LeftUp
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 114123294711846994}
@@ -1152,7 +1146,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 1
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
@@ -1246,11 +1240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RayCastDown: -0.8
-  LeftButton: 0
-  RightButton: 1
-  PlayerRigid: {fileID: 50825351038526374}
-  MoveSpeed: 360
+  MovingLeft: 0
+  MovingRight: 0
 --- !u!114 &114522223468903068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1285,7 +1276,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114497673304051238}
-          m_MethodName: Right
+          m_MethodName: Rightup
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 114123294711846994}
@@ -1404,11 +1395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RayCastDown: -0.8
-  LeftButton: 0
-  RightButton: 0
-  PlayerRigid: {fileID: 50825351038526374}
-  MoveSpeed: 360
+  MovingLeft: 0
+  MovingRight: 0
 --- !u!114 &114833901373152098
 MonoBehaviour:
   m_ObjectHideFlags: 1

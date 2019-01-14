@@ -20,7 +20,13 @@ public class PlayerMovement : MonoBehaviour {
 
     public bool Hit; //changed in PlayerDamage script
     public float HitCounter;
-   
+
+    [HideInInspector]
+    public bool MovingLeft;
+    [HideInInspector]
+    public bool MovingRight;
+
+
     public float JumpHeight;
     [HideInInspector]
     public bool BigAttackBool;
@@ -57,9 +63,43 @@ public class PlayerMovement : MonoBehaviour {
         {
             BigAttackFunck();
         }
-      
-        
-            //Debug.DrawLine(transform.position, transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
+
+
+        //Moving the player left
+        if (MovingLeft == true && !Hit) 
+        {
+
+            PlayerRigid.velocity = new Vector2(-MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+            Debug.Log(-MoveSpeed);
+            GetComponent<SpriteRenderer>().flipX = true;
+            Balls.GetComponent<SpriteRenderer>().flipX = true;
+            Eyes.GetComponent<SpriteRenderer>().flipX = true;
+            Eyes.transform.position = new Vector2(Player.transform.position.x - 0.16f, Player.transform.position.y + 0.43f);
+            BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
+            Animated.SetFloat("Moving", 1);
+        }
+        if (MovingLeft == false && !Hit)
+        {
+            Debug.Log("Moving Left");
+            PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+            Animated.SetFloat("Moving", 0);
+        }
+        if (MovingRight == true && !Hit)
+        {
+            PlayerRigid.velocity = new Vector2(MoveSpeed * Time.deltaTime, PlayerRigid.velocity.y);
+            GetComponent<SpriteRenderer>().flipX = false;
+            Balls.GetComponent<SpriteRenderer>().flipX = false;
+            Eyes.GetComponent<SpriteRenderer>().flipX = false;
+            Eyes.transform.position = new Vector2(Player.transform.position.x + 0.16f, Player.transform.position.y + 0.43f);
+            BigAttack.transform.rotation = Quaternion.Euler(0, 90, 90);
+            Animated.SetFloat("Moving", 1);
+        }
+        if (MovingRight == false && MovingLeft == false && !Hit)
+        {
+            Animated.SetFloat("Moving", 0);
+            PlayerRigid.velocity = new Vector2(0, PlayerRigid.velocity.y);
+        }
+        //Debug.DrawLine(transform.position, transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
     }
     void BigAttackFunck()
     {

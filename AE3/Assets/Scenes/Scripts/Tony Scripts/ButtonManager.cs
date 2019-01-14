@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject Player;
 
     //----------------------------------------------------------------MOVEMENT-----------------------------------------------------------------------------------//
 
@@ -30,77 +31,56 @@ public class ButtonManager : MonoBehaviour
 
 
     //LEFT
-    private bool MovingLeft = false;
+    [HideInInspector]
+    public bool MovingLeft = false;
     //When button is held down
-    public void Left(PlayerMovement Player)
+    public void Left(PlayerMovement AS)
     {
-        if (!MovingLeft)
-        {
-            //highlight button
-            GetComponent<Image>().color = new Color(255, 255, 255, 255);
-            //play animation
-            Player.Animated.SetFloat("Moving", 1);
-            //flip sprites
-            Player.GetComponent<SpriteRenderer>().flipX = true;
-            Player.Balls.GetComponent<SpriteRenderer>().flipX = true;
-            Player.Eyes.GetComponent<SpriteRenderer>().flipX = true;
-            //re-locate Eyes
-            Player.Eyes.transform.position = new Vector2(Player.transform.position.x - 0.16f, Player.transform.position.y + 0.43f);
-            //Rotates origins of attacks
-            Player.BigAttack.transform.rotation = Quaternion.Euler(0, -90, 90);
-            FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(-2, 2);
-            MovingLeft = true;
-        }
-        //move player
-        Player.PlayerRigid.velocity = new Vector2((Player.MoveSpeed * Time.deltaTime) * -1, Player.PlayerRigid.velocity.y);
+     Player.GetComponent<PlayerMovement>().MovingLeft = true;
+     
+     
+     FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(-2, 2);
+     GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            
+        
+       
     }
 
     //When left button is released
-    public void LeftUp(PlayerMovement Player)
+    public void LeftUp(PlayerMovement AS)
     {
+        Player.GetComponent<PlayerMovement>().MovingLeft = false;
         //take off highlight
         GetComponent<Image>().color = new Color(1, 1, 1, 0.66f);
-        //stop player
-        Player.PlayerRigid.velocity = new Vector2(0, Player.PlayerRigid.velocity.y);
-        //stop animation
-        Player.Animated.SetFloat("Moving", 0);
+        //stop player       
+        //stop animation      
         MovingLeft = false;
     }
 
     //RIGHT
-    private bool MovingRight = false;
-    public void Right(PlayerMovement Player)
+    [HideInInspector]
+    
+   
+    public void Right(PlayerMovement AS)
     {
-        if (!MovingRight)
-        {
-            GetComponent<Image>().color = new Color(255, 255, 255, 255);
-            //play animation
-            Player.Animated.SetFloat("Moving", 1);
-            //flip the sprites
-            Player.GetComponent<SpriteRenderer>().flipX = false;
-            Player.Balls.GetComponent<SpriteRenderer>().flipX = false;
-            Player.Eyes.GetComponent<SpriteRenderer>().flipX = false;
-            //re-locate eyes
-            Player.Eyes.transform.position = new Vector2(Player.transform.position.x + 0.16f, Player.transform.position.y + 0.43f);
-            //Rotates origins of attacks
-            Player.BigAttack.transform.rotation = Quaternion.Euler(0, 90, 90);
-            FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(2, 2);
-            MovingRight = true;
-        }
-        Player.PlayerRigid.velocity = new Vector2((Player.MoveSpeed * Time.deltaTime) * 1, Player.PlayerRigid.velocity.y);
+
+      Player.GetComponent<PlayerMovement>().MovingRight = true;
+      GetComponent<Image>().color = new Color(1, 1, 1, 1);           
+      //Rotates origins of attacks          
+      FindObjectOfType<LightningAttack>().transform.localScale = new Vector2(2, 2);
+           
+        
+      
 
     }
 
     //When Right button is released
-    public void Rightup(PlayerMovement Player)
+    public void Rightup(PlayerMovement AS)
     {
-        //take off highlight
+        Player.GetComponent<PlayerMovement>().MovingRight = false;
         GetComponent<Image>().color = new Color(1, 1, 1, 0.66f);
-        //stop player
-        Player.PlayerRigid.velocity = new Vector2(0, Player.PlayerRigid.velocity.y);
-        //stop animation
-        Player.Animated.SetFloat("Moving", 0);
-        MovingRight = false;
+        
+        
     }
     //-----------------------------------------------------------ATTACKS------------------------------------------------------------------------------//
 
@@ -184,5 +164,6 @@ public class ButtonManager : MonoBehaviour
         //Store that player selected No
         FindObjectOfType<CrazyTalk>().Answer = false;
     }
+
 
 }
