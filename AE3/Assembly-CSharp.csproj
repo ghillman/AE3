@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ArrowScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ArrowTrapBoi.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\AttackScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BoulderPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BouncieBoiScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BoxesBoi.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BreakyboiScript.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\DummyBehaviour.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\eightLevel.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\FallingBoulders.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\FingerOfDeath.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Firebolt.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\FlamePlatform.cs" />
