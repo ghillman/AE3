@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ArrowTrapBoi.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\AttackScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BouncieBoiScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BoxesBoi.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\BreakyboiScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\Camera.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\ChestScrimp.cs" />
