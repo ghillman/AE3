@@ -1034,6 +1034,8 @@ MonoBehaviour:
   BigAttackCharge: 0
   Hit: 0
   HitCounter: 0
+  MovingLeft: 0
+  MovingRight: 0
   JumpHeight: 460
   BigAttackBool: 0
   RayCastDown: -0.8
@@ -1052,8 +1054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1100652455965978}
   MovingLeft: 0
-  MovingRight: 0
 --- !u!114 &114153895042123578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1080,8 +1082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1100652455965978}
   MovingLeft: 0
-  MovingRight: 0
 --- !u!114 &114295269130035068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1240,8 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1100652455965978}
   MovingLeft: 0
-  MovingRight: 0
 --- !u!114 &114522223468903068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1395,8 +1397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959f2e9eb305d34d9916a6569a59e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1100652455965978}
   MovingLeft: 0
-  MovingRight: 0
 --- !u!114 &114833901373152098
 MonoBehaviour:
   m_ObjectHideFlags: 1

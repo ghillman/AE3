@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EmberRigid: {fileID: 50489755115056786}
-  Speed: 1600
+  Speed: 600
 --- !u!114 &114615385776283274
 MonoBehaviour:
   m_ObjectHideFlags: 1

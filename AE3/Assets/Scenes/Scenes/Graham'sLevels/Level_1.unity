@@ -29287,26 +29287,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114153287569316746, guid: f480cd6b0c33fc241a8be34dc498bb28,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 724670578}
-    - target: {fileID: 114497673304051238, guid: f480cd6b0c33fc241a8be34dc498bb28,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 724670578}
-    - target: {fileID: 114743947146740324, guid: f480cd6b0c33fc241a8be34dc498bb28,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 724670578}
-    - target: {fileID: 114245607915309756, guid: f480cd6b0c33fc241a8be34dc498bb28,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 724670578}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
   m_IsPrefabParent: 0
