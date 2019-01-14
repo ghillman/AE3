@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\LavaJump.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Sound.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\SpawnFireball.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Switch.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\TonysMovingPlatform.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Github/AE3/AE3/AE3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
