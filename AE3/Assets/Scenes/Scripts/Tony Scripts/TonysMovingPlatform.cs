@@ -20,10 +20,17 @@ public class TonysMovingPlatform : MonoBehaviour
     //If platform hits
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (MovingRight)
-            MovingRight = false;
+        if (collision.gameObject.name == "Warlock")
+        {
+            gameObject.transform.parent = collision.transform;
+        }
         else
-            MovingRight = true;
+        {
+            if (MovingRight)
+                MovingRight = false;
+            else
+                MovingRight = true;
+        }
     }
 
 }
