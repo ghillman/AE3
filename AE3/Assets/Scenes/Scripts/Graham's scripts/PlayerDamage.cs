@@ -65,7 +65,12 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 2;
 
             }
-            
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Spider")
+            {
+                _Damage = 1;
+
+            }
+
 
             if (Target.gameObject.transform.position.x < transform.position.x)
             {
