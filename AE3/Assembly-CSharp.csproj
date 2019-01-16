@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scenes\Enemies\BoneFletcher\BoneScript.cs" />
     <Compile Include="Assets\Scenes\Enemies\BoneFletcher\BponeFletcher.cs" />
     <Compile Include="Assets\Scenes\Enemies\BounceBoss\BounceBossScript.cs" />
+    <Compile Include="Assets\Scenes\Enemies\Chaser\Chase.cs" />
     <Compile Include="Assets\Scenes\Enemies\Crazy Man\CrazyTalk.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\EmberAttack.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\FireBlobMovement.cs" />
