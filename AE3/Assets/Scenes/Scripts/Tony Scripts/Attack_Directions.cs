@@ -9,13 +9,8 @@ public class Attack_Directions : MonoBehaviour
     public Rigidbody2D rigid; //rigid bodies
     //directions
     [HideInInspector]
-    public bool vertical;
-    [HideInInspector]
-    public bool horizontal;
-    [HideInInspector]
     public bool up = false;
-    [HideInInspector]
-    public bool right;
+ 
 
     [HideInInspector]
     public float speed;
@@ -28,13 +23,11 @@ public class Attack_Directions : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (vertical)
-        {
-            if (up)
-                rigid.velocity = new Vector2(rigid.velocity.x, speed * Time.deltaTime);
-            else
-                rigid.velocity = new Vector2(rigid.velocity.x, -speed * Time.deltaTime);
-        }
+
+        if (up)
+            rigid.velocity = new Vector2(rigid.velocity.x, speed * Time.deltaTime);
+        else
+            rigid.velocity = new Vector2(rigid.velocity.x, -speed * Time.deltaTime);
 
     }
 }
