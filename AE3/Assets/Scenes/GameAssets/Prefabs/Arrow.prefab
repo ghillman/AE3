@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114323679368787338}
   - component: {fileID: 50878906059485570}
   - component: {fileID: 61396475558663124}
-  m_Layer: 0
+  - component: {fileID: 114661634074438380}
+  m_Layer: 12
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626161411718932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.44, y: -3.45, z: 0}
+  m_LocalPosition: {x: -5.352504, y: 1.080958, z: 0}
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +101,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArrowSpeed: 500
-  LeftRight: 1
+  LeftRight: 0
+--- !u!114 &114661634074438380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626161411718932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Arrow
 --- !u!212 &212246800268710896
 SpriteRenderer:
   m_ObjectHideFlags: 1

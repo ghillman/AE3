@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\LightningAttack.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\MagicKey.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\OpenDoorScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerPlatform.cs" />

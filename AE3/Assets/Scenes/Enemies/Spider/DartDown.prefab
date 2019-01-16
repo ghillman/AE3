@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 199467287983381936}
   - component: {fileID: 50427394177202592}
   - component: {fileID: 114623837223103738}
+  - component: {fileID: 114576499405838102}
   m_Layer: 12
   m_Name: DartDown
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +80,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0042951107}
   serializedVersion: 2
   m_Radius: 0.2614826
+--- !u!114 &114576499405838102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930812200115198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Dart
 --- !u!114 &114623837223103738
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -52,12 +52,12 @@ public class PlayerDamage : MonoBehaviour {
             }
             if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "AirBomb")
             {
-                _Damage = 5;
+                _Damage = 2;
 
             }
             if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Cloud")
             {
-                _Damage = 2;
+                _Damage = 1;
 
             }
             if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "FireCloud")
@@ -65,9 +65,24 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 2;
 
             }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ember")
+            {
+                _Damage = Random.Range(1, 2);
+
+            }
             if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Spider")
             {
                 _Damage = 1;
+
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Dart")
+            {
+                _Damage = Random.Range(1,3);
+
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Arrow")
+            {
+                _Damage = 3;
 
             }
 
@@ -96,9 +111,20 @@ public class PlayerDamage : MonoBehaviour {
     {
         if(Target.gameObject.CompareTag("Enemy"))
         {
-            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "FireBall")
+            gameObject.GetComponent<PlayerMovement>().Hit = true;
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ember")
             {
-                _Damage = 2;
+                _Damage = Random.Range(1, 2); ;
+
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Dart")
+            {
+                _Damage = Random.Range(1, 3);
+
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Arrow")
+            {
+                _Damage = 3;
 
             }
             PlayerState.PlayerHealth -= _Damage;

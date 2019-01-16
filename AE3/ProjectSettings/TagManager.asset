@@ -20,6 +20,7 @@ TagManager:
   - Hazzard
   - Chest
   - Platform
+  - Interactable
   layers:
   - Default
   - TransparentFX

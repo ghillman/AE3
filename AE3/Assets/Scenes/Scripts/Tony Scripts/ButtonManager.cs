@@ -16,17 +16,24 @@ public class ButtonManager : MonoBehaviour
         //Highlight button
         GetComponent<Image>().color = new Color(255, 255, 255, 255);
         //draw raycast
-        Debug.DrawLine(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
-        //if raycast hits ground allow player to jump
-        if (Physics2D.Linecast(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
+        if (Player.gameObject.GetComponent<PlayerMovement>().Interacting == false)
         {
+            Debug.DrawLine(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
+            //if raycast hits ground allow player to jump
+            if (Physics2D.Linecast(Player.transform.position, Player.transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
+            {
 
-            Player.velocity = new Vector2(Player.velocity.x, FindObjectOfType<PlayerMovement>().JumpHeight * Time.deltaTime);
-            //play animations
-            FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(false);
-            FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(true);
+                Player.velocity = new Vector2(Player.velocity.x, FindObjectOfType<PlayerMovement>().JumpHeight * Time.deltaTime);
+                //play animations
+                FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(false);
+                FindObjectOfType<PlayerMovement>().JumpParticals.SetActive(true);
+            }
+            
         }
-
+        else
+        {
+            Player.gameObject.GetComponent<PlayerMovement>().Interacted = true;
+        }
     }
 
 

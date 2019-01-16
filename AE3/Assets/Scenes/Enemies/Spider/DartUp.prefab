@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 199156505310924236}
   - component: {fileID: 50080625656359646}
   - component: {fileID: 114934756171007224}
+  - component: {fileID: 114997808302353364}
   m_Layer: 12
   m_Name: DartUp
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 300
   _Lifetime: 2
+--- !u!114 &114997808302353364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307739145124734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Dart
 --- !u!198 &198958149394928140
 ParticleSystem:
   m_ObjectHideFlags: 1

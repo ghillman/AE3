@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 199451585081333576}
   - component: {fileID: 50281106879218892}
   - component: {fileID: 114841284794945480}
+  - component: {fileID: 114906512373356592}
   m_Layer: 12
   m_Name: DartMiddle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 300
   _Lifetime: 2
+--- !u!114 &114906512373356592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1172562283764342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Dart
 --- !u!198 &198465820014512430
 ParticleSystem:
   m_ObjectHideFlags: 1

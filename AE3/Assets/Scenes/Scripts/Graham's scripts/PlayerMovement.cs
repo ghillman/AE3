@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour {
     public float HitCounter;
 
     [HideInInspector]
+    public bool Interacting;
+    [HideInInspector]
+    public bool Interacted;
+
+    [HideInInspector]
     public bool MovingLeft;
     [HideInInspector]
     public bool MovingRight;
@@ -45,7 +50,20 @@ public class PlayerMovement : MonoBehaviour {
         Hit = false;
         HitCounter = 0;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Interactable"))
+        {
+            Interacting = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            Interacting = false;
+        }
+    }
     void Update() {
         if (Hit)
         {

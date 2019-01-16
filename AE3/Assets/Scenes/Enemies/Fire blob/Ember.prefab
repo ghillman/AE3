@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: FireBall
+  enemyType: Ember
 --- !u!198 &198634555179238314
 ParticleSystem:
   m_ObjectHideFlags: 1
