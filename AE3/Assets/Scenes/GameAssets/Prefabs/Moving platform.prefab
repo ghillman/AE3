@@ -100,7 +100,7 @@ MonoBehaviour:
   moveTime: 1.5
   moveSpeed: 4
   rotationPoint: {fileID: 0}
-  rotationRadius: 0
+  rotationRadius: 2
 --- !u!212 &212942381656613526
 SpriteRenderer:
   m_ObjectHideFlags: 1

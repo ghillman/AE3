@@ -6,27 +6,43 @@ public class ChestScrimp : MonoBehaviour {
 
     private bool spawned;
     public GameObject Item;
+    public GameObject Player;
+    public SpriteRenderer Alert;
 	// Use this for initialization
 	void Start () {
 
         spawned = false;     
         
 	}
-
-    // Update is called once per frame	
-    private void OnTriggerStay2D(Collider2D Target)
+    void Update()
     {
-        if (Target.gameObject.CompareTag("Player"))
+        if (Player.GetComponent<PlayerMovement>().Interacted == true && Player.GetComponent<PlayerMovement>().Interacting == true && spawned == false)
         {
-            if (!spawned)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    Instantiate(Item, transform.position, Quaternion.identity);
-                    spawned = true;
-                }
-            }
+            Instantiate(Item, transform.position, Quaternion.identity);
+            spawned = true;
+            Player.GetComponent<PlayerMovement>().Interacted = false;
+            Alert.enabled = false;
+            
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && spawned == false)
+        {
+            Alert.enabled = true;
+        }
+
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            
+            Alert.enabled = false;
+        }
+
+    }
+
+    // Update is called once per frame	
 
 }
