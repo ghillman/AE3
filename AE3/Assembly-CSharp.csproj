@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\OpenDoorScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerDamage.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerLevel.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PlayerState.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\PuzzleDoor.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\SpawnImp.cs" />
     <Compile Include="Assets\Scenes\Scripts\Graham's scripts\StartScript.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Graham's scripts\TwentySecondLevel.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Attack_Directions.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Attack_Horizontal.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\AttackSpawn.cs" />

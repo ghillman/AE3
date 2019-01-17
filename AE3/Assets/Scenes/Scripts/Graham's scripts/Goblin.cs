@@ -36,11 +36,12 @@ public class Goblin : MonoBehaviour {
             if (leftandright)
             {
                 GoblinRigid.velocity = new Vector2(GoblinSpeed, GoblinRigid.velocity.y);
-                
+                GetComponent<SpriteRenderer>().flipX = true;
             }
             else
             {
-                GoblinRigid.velocity = new Vector2(-GoblinSpeed, GoblinRigid.velocity.y);             
+                GoblinRigid.velocity = new Vector2(-GoblinSpeed, GoblinRigid.velocity.y);
+                GetComponent<SpriteRenderer>().flipX = false;
             }
             if (Physics2D.Linecast(transform.position, transform.position + new Vector3(0, RayCastDown, 0), 1 << LayerMask.NameToLayer("Ground")))
             {
@@ -52,7 +53,7 @@ public class Goblin : MonoBehaviour {
               else if (Physics2D.Linecast(transform.position, transform.position + new Vector3(-RayCastSide, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
               {
                     GoblinRigid.velocity = new Vector2(GoblinRigid.velocity.x, GoblinJumpSpeed);
-                }
+              }
             }
                 
         }
