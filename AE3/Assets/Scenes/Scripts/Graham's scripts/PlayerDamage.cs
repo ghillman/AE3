@@ -146,6 +146,10 @@ public class PlayerDamage : MonoBehaviour {
             {
                 _Damage = 5; //dead!!!
             }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Red_Mushroom")
+            {
+                _Damage = 1;
+            }
             else
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity =
