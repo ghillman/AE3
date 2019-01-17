@@ -7,6 +7,6 @@ public class KillOnCollision : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.SetActive(false);
+        Debug.Log(collision.gameObject.tag);
     }
 }

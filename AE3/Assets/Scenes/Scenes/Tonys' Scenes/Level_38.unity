@@ -3219,7 +3219,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Doom: {fileID: 826496068}
   Speed: 15
+  direction: 0
   cooldown: -0.02
+  active: 0
 --- !u!58 &826496071
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28757,6 +28759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Imp: {fileID: 1734505775697126, guid: 40e7f5dd5d1bf9f4ba237b2a3da3adca, type: 2}
+  active: 0
 --- !u!114 &2089807102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28916,7 +28919,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2089807100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: -1.4019358, z: -0.82}
+  m_LocalPosition: {x: -5.46, y: -1.4019358, z: -0.82}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 1037482828}

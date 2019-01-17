@@ -38,6 +38,10 @@ public class PlayerDamage : MonoBehaviour {
             PlayerState.PlayerHealth = 4;
             SceneManager.LoadScene(level.buildIndex);
         }
+        if (PlayerState.PlayerHealth <= 0)
+        {
+            dead = true;
+        }
 
     }
     //Knocksback and deals damage to player depending on enemy it collided with

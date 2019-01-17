@@ -50,7 +50,8 @@ public class Necro_Script : MonoBehaviour
             countdown = delay;
             DeathRayCountdowm -= Time.deltaTime;
             if(DeathRayCountdowm < 0)
-            { 
+            {
+                DeathRay.transform.position = spawnPoint.transform.position;
                 Instantiate(DeathRay);
                 DeathRayCountdowm = DeathRayDelay;
             }

@@ -77,10 +77,7 @@ public class PlayerMovement : MonoBehaviour {
         myTime = Time.deltaTime;
         Movement();
         
-        if (BigAttackBool == true)
-        {
-            BigAttackFunck();
-        }
+        
 
 
         //Moving the player left
@@ -119,25 +116,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         //Debug.DrawLine(transform.position, transform.position + new Vector3(0, RayCastDown, 0), Color.blue);
     }
-    void BigAttackFunck()
-    {
-        //Scales up the collider of the Big Attack
-        Transform BigAttackCollider = BigAttack.transform.GetChild(0).transform;
-        BigAttackSize += 0.1f;
-        BigAttackCollider.localScale = new Vector2(BigAttackSize, BigAttackSize);
-
-        BigAttackCharge += Time.deltaTime;
-        if (BigAttackCharge >= BigAttackCooldown)
-        {
-            BigAttackBool = false;
-            
-            BigAttackCharge = 0;
-        }
-        if (BigAttackCharge >= BigAttackTime)
-        {
-            BigAttack.SetActive(false);
-        }
-    }
+    
         
     
     void Movement()
@@ -146,15 +125,7 @@ public class PlayerMovement : MonoBehaviour {
         //if (Input.GetKeyDown(KeyCode.Mouse1))
         //{
         //    //displays attack and then disperses it
-        //    if (BigAttackBool == false)
-        //    {
-        //        BigAttackBool = true;
-        //        BigAttack.SetActive(true);
-        //        Transform BigAttackCollider = BigAttack.transform.GetChild(0).transform;
-        //        BigAttackSize = 0;
-        //        BigAttackCollider.localScale = new Vector2(BigAttackSize, BigAttackSize);
-        //    }
-        //}
+        
         //Jump  
         //if (Input.GetKeyDown(KeyCode.Space))
         //{

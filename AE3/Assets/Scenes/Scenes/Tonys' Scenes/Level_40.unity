@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &310399206
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.7430015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.316584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903776785296338, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &403019017
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +264,7 @@ Transform:
   m_LocalScale: {x: 22.946947, y: 21.03511, z: 20.531116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435939937
 GameObject:
@@ -233,9 +275,10 @@ GameObject:
   m_Component:
   - component: {fileID: 435939939}
   - component: {fileID: 435939938}
+  - component: {fileID: 435939940}
   m_Layer: 0
   m_Name: Lava (1)
-  m_TagString: Untagged
+  m_TagString: Hazzard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,8 +339,75 @@ Transform:
   m_LocalScale: {x: 124.27812, y: 23.045654, z: 20.531116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &435939940
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435939937}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!1001 &472767533
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.518589
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.0022182
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996761357240544, guid: b81caced662d478438ac30850decb219, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b81caced662d478438ac30850decb219, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &547181075
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,9 +418,10 @@ GameObject:
   - component: {fileID: 547181078}
   - component: {fileID: 547181077}
   - component: {fileID: 547181076}
+  - component: {fileID: 547181079}
   m_Layer: 0
   m_Name: Lava (3)
-  m_TagString: Untagged
+  m_TagString: Hazzard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,8 +518,33 @@ Transform:
   m_LocalScale: {x: 22.946947, y: 21.03511, z: 20.531116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &547181079
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547181075}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &686109508
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,9 +555,10 @@ GameObject:
   - component: {fileID: 686109511}
   - component: {fileID: 686109510}
   - component: {fileID: 686109509}
+  - component: {fileID: 686109512}
   m_Layer: 0
   m_Name: Lava (4)
-  m_TagString: Untagged
+  m_TagString: Hazzard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,8 +655,33 @@ Transform:
   m_LocalScale: {x: 22.946947, y: 21.03511, z: 20.531116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &686109512
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686109508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &1356808154
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +722,7 @@ Transform:
   - {fileID: 1486976625}
   - {fileID: 1443583686}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443583685
 GameObject:
@@ -11278,9 +11440,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1677627978}
   - component: {fileID: 1677627977}
+  - component: {fileID: 1677627979}
   m_Layer: 0
   m_Name: Lava (2)
-  m_TagString: Untagged
+  m_TagString: Hazzard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11341,8 +11504,38 @@ Transform:
   m_LocalScale: {x: 125.46194, y: 23.834873, z: 20.531116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1677627979
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677627976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!1 &1962828019 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1100652455965978, guid: f480cd6b0c33fc241a8be34dc498bb28,
+    type: 2}
+  m_PrefabInternal: {fileID: 310399206}
 --- !u!1 &2014488739
 GameObject:
   m_ObjectHideFlags: 0
@@ -11354,6 +11547,7 @@ GameObject:
   - component: {fileID: 2014488742}
   - component: {fileID: 2014488741}
   - component: {fileID: 2014488740}
+  - component: {fileID: 2014488744}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11424,3 +11618,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014488744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014488739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c05e51eacf68664abb5c14cf755e117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Follow: {fileID: 1962828019}
+  CameraYAdjustment: 0
+  Speed: 4
