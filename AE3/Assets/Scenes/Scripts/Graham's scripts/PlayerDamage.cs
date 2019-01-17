@@ -10,17 +10,27 @@ public class PlayerDamage : MonoBehaviour {
     private int _Damage;
     private string enemy;
     public float knockback;
+    private bool Hit;
     public bool dead;
-
+    private float HitTime;
     // Use this for initialization
     void Start () {
 
         health = PlayerState.PlayerHealth;
         dead = false;
-
+        Hit = false;
 	}
     private void Update()
     {
+        if(Hit)
+        {
+            HitTime += Time.deltaTime;
+            if(HitTime >= 0.5)
+            {
+                Hit = false;
+                HitTime = 0;
+            }
+        }
        if (dead)
         {
            
@@ -85,7 +95,11 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 3;
 
             }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ghost")
+            {
+                _Damage = 1;
 
+            }
 
             if (Target.gameObject.transform.position.x < transform.position.x)
             {
@@ -109,27 +123,49 @@ public class PlayerDamage : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D Target)
     {
-        if(Target.gameObject.CompareTag("Enemy"))
-        {
-            gameObject.GetComponent<PlayerMovement>().Hit = true;
-            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ember")
+        if (!Hit)
+        { 
+            if (Target.gameObject.CompareTag("Enemy"))
             {
-                _Damage = Random.Range(1, 2); ;
+                        
+                Hit = true;
+                gameObject.GetComponent<PlayerMovement>().Hit = true;
+                float newknockback = knockback * Time.deltaTime;
+                if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ember")
+                {
+                    _Damage = Random.Range(1, 2); ;
 
-            }
-            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Dart")
-            {
-                _Damage = Random.Range(1, 3);
+                }
+                if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Dart")
+                {
+                    _Damage = Random.Range(1, 3);
 
-            }
-            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Arrow")
-            {
-                _Damage = 3;
+                }
+                if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Arrow")
+                {
+                    _Damage = 3;
 
+                }
+                if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Ghost")
+                {
+                    _Damage = 1;
+
+                }
+                if (Target.gameObject.transform.position.x < transform.position.x)
+                {
+                    gameObject.GetComponent<Rigidbody2D>().velocity =
+                    new Vector2(newknockback, newknockback);
+                }
+                else
+                {
+                    gameObject.GetComponent<Rigidbody2D>().velocity =
+                    new Vector2(-newknockback, newknockback);
+                }
             }
             PlayerState.PlayerHealth -= _Damage;
             Debug.Log(PlayerState.PlayerHealth);
         }
+
         if (Target.gameObject.CompareTag("Hazzard"))
         {
             PlayerState.PlayerHealth = 0;
