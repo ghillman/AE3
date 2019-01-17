@@ -113,6 +113,7 @@ public class PlayerDamage : MonoBehaviour {
             }
             PlayerState.PlayerHealth -= _Damage;
             Debug.Log(PlayerState.PlayerHealth);
+            _Damage = 0;
             
         }
         if (PlayerState.PlayerHealth <= 0)
@@ -164,6 +165,7 @@ public class PlayerDamage : MonoBehaviour {
             }
             PlayerState.PlayerHealth -= _Damage;
             Debug.Log(PlayerState.PlayerHealth);
+            _Damage = 0;
         }
 
         if (Target.gameObject.CompareTag("Hazzard"))

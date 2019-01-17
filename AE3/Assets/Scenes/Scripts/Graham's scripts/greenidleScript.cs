@@ -6,6 +6,7 @@ public class greenidleScript : MonoBehaviour {
 
     public int NumberOfGhosts;
     private GameObject[] GhostArray;
+    public EdgeCollider2D Door;
     private bool Hit;
     public Sprite Dead;
 	// Use this for initialization
@@ -18,6 +19,7 @@ public class greenidleScript : MonoBehaviour {
 
         if(Hit)
         {
+            Door.enabled = false;
             GhostArray = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject Ghost in GhostArray)
             {
