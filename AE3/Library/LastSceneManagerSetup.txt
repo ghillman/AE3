@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Scenes/Graham'sLevels/Level_21.unity
+- path: Assets/Scenes/Scenes/Tonys' Scenes/Level_33.unity
   isLoaded: 1
   isActive: 1
