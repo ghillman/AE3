@@ -200,6 +200,29 @@ public class ButtonManager : MonoBehaviour
         //Store that player selected No
         FindObjectOfType<CrazyTalk>().Answer = false;
     }
+    //-------------------------------------------------------------LADDER------------------------------------------------------------//
 
+
+    public void OnClimpUp()
+    {
+        FindObjectOfType<Ladder_Script>().ascending = true;
+    }
+    //stop moving them up
+    public void OffClimbUp()
+    {
+        FindObjectOfType<Ladder_Script>().ascending = false;
+    }
+
+    //get the player and move them down
+    public void OnClimpDown()
+    {
+        FindObjectOfType<Ladder_Script>().Descending = true;
+    }
+
+    //stop player moving doown
+    public void OffClimbDown()
+    {
+        FindObjectOfType<Ladder_Script>().Descending = false;
+    }
 
 }
