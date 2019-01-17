@@ -39,6 +39,8 @@ GameObject:
   - component: {fileID: 70940050365992918}
   - component: {fileID: 95492632724122232}
   - component: {fileID: 114754462467804116}
+  - component: {fileID: 114059090056477640}
+  - component: {fileID: 114712549351963842}
   m_Layer: 0
   m_Name: Zomble_0
   m_TagString: Untagged
@@ -155,6 +157,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114059090056477640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059182456201952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Zombie
+--- !u!114 &114712549351963842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059182456201952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 18
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!114 &114754462467804116
 MonoBehaviour:
   m_ObjectHideFlags: 1

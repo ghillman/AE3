@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 300957963}
   - component: {fileID: 300957962}
   - component: {fileID: 300957964}
+  - component: {fileID: 300957966}
+  - component: {fileID: 300957965}
   m_Layer: 0
   m_Name: BounceBoss_0
   m_TagString: Untagged
@@ -273,6 +275,37 @@ MonoBehaviour:
   MoveSpeed: 150
   JumpHeight: 350
   bounceTime: 1
+--- !u!114 &300957965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300957958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Bounce_Boss
+--- !u!114 &300957966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300957958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 25
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!1 &389690086
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +897,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4769233007970868, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114522223468903068, guid: f480cd6b0c33fc241a8be34dc498bb28,
         type: 2}
@@ -943,7 +976,27 @@ Prefab:
     - target: {fileID: 224820931699297862, guid: f480cd6b0c33fc241a8be34dc498bb28,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 224605001456441622, guid: f480cd6b0c33fc241a8be34dc498bb28,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224836998054522270, guid: f480cd6b0c33fc241a8be34dc498bb28,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022244231414274, guid: f480cd6b0c33fc241a8be34dc498bb28,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 224308829780849750, guid: f480cd6b0c33fc241a8be34dc498bb28,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f480cd6b0c33fc241a8be34dc498bb28, type: 2}
@@ -1070,7 +1123,7 @@ Transform:
   - {fileID: 432315758}
   - {fileID: 1378702912}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776828609
 GameObject:
@@ -3254,7 +3307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4891401794958398, guid: 7d4a29b27e2ed5a44819136069ba9147, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1261634793400768, guid: 7d4a29b27e2ed5a44819136069ba9147, type: 2}
       propertyPath: m_Name

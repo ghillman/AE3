@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 58552239991057764}
   - component: {fileID: 114036785724176712}
   - component: {fileID: 114697404780569268}
-  m_Layer: 0
+  - component: {fileID: 114318459791628664}
+  m_Layer: 12
   m_Name: Horizontal_Projectile
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 200
   Right: 1
+--- !u!114 &114318459791628664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892766407232858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Cross_Bomber_Projectile
 --- !u!114 &114697404780569268
 MonoBehaviour:
   m_ObjectHideFlags: 1

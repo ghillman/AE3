@@ -100,13 +100,53 @@ public class PlayerDamage : MonoBehaviour {
                 _Damage = 1;
 
             }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Cross_Bomber")
+            {
+                _Damage = 1;
+            }
+            if(Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Cross_Bomber_Projectile")
+            {
+                _Damage = 2;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "X_Bomber")
+            {
+                _Damage = 1;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "x_BomberProjectile")
+            {
+                _Damage = 2;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Nocto")
+            {
+                _Damage = 1;
+            }
 
             if (Target.gameObject.transform.position.x < transform.position.x)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = 
                 new Vector2(newknockback, newknockback);
             }
-           else
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Homing_Shot")
+            {
+                _Damage = 3;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Zombie")
+            {
+                _Damage = 3;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Chaser")
+            {
+                _Damage = Random.Range(2, 3);
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Bonce_Boss")
+            {
+                _Damage = 1;
+            }
+            if (Target.gameObject.GetComponent<EnemyAttack>().enemyType == "Fireball")
+            {
+                _Damage = 5; //dead!!!
+            }
+            else
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity =
                 new Vector2(-newknockback, newknockback);

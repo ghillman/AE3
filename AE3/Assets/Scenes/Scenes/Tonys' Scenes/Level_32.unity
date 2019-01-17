@@ -208,6 +208,8 @@ GameObject:
   - component: {fileID: 136377232}
   - component: {fileID: 136377231}
   - component: {fileID: 136377234}
+  - component: {fileID: 136377236}
+  - component: {fileID: 136377235}
   m_Layer: 0
   m_Name: Chaser_TopRight
   m_TagString: Untagged
@@ -360,6 +362,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.46}
   m_EdgeRadius: 0
+--- !u!114 &136377235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136377228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Chaser
+--- !u!114 &136377236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136377228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 14
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!1001 &319605182
 Prefab:
   m_ObjectHideFlags: 0
@@ -465,6 +498,8 @@ GameObject:
   - component: {fileID: 596911053}
   - component: {fileID: 596911052}
   - component: {fileID: 596911051}
+  - component: {fileID: 596911058}
+  - component: {fileID: 596911057}
   m_Layer: 0
   m_Name: Chaser_Mid
   m_TagString: Untagged
@@ -617,6 +652,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596911057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596911050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Chaser
+--- !u!114 &596911058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596911050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 14
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!1001 &678425317
 Prefab:
   m_ObjectHideFlags: 0
@@ -1389,6 +1455,8 @@ GameObject:
   - component: {fileID: 1501401795}
   - component: {fileID: 1501401794}
   - component: {fileID: 1501401793}
+  - component: {fileID: 1501401800}
+  - component: {fileID: 1501401799}
   m_Layer: 0
   m_Name: Chaser_Bottom
   m_TagString: Untagged
@@ -1541,6 +1609,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1501401799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501401792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 14
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
+--- !u!114 &1501401800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501401792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Chaser
 --- !u!1 &1525709593
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,6 +12330,8 @@ GameObject:
   - component: {fileID: 2096620172}
   - component: {fileID: 2096620171}
   - component: {fileID: 2096620170}
+  - component: {fileID: 2096620177}
+  - component: {fileID: 2096620176}
   m_Layer: 0
   m_Name: Chaser_TopLeft
   m_TagString: Untagged
@@ -12383,3 +12484,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2096620176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096620169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 14
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
+--- !u!114 &2096620177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096620169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Chaser

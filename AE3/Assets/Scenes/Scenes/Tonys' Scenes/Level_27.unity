@@ -171,9 +171,11 @@ GameObject:
   - component: {fileID: 86675035}
   - component: {fileID: 86675034}
   - component: {fileID: 86675033}
-  m_Layer: 0
+  - component: {fileID: 86675037}
+  - component: {fileID: 86675036}
+  m_Layer: 12
   m_Name: X-Bomber-1.png
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,6 +290,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &86675036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86675030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 15
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
+--- !u!114 &86675037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86675030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: X_Bomber
 --- !u!1001 &137306112
 Prefab:
   m_ObjectHideFlags: 0
@@ -444,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321910500}
   - component: {fileID: 321910501}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Attack_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3502,7 +3535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586576202}
   - component: {fileID: 586576203}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spawn_TopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3547,7 +3580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699801131}
   - component: {fileID: 699801132}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Attack_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3733,7 +3766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798391127}
   - component: {fileID: 798391128}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spawn_DownRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +3811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 876117886}
   - component: {fileID: 876117887}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Attack_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3870,11 +3903,13 @@ GameObject:
   - component: {fileID: 911731164}
   - component: {fileID: 911731163}
   - component: {fileID: 911731167}
+  - component: {fileID: 911731169}
+  - component: {fileID: 911731168}
   - component: {fileID: 911731166}
   - component: {fileID: 911731165}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cross-Bomber-1.png
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4004,6 +4039,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.57}
   m_EdgeRadius: 0
+--- !u!114 &911731168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911731162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Cross_Bomber
+--- !u!114 &911731169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911731162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 15
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!1 &978132146
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,7 +4259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991595814}
   - component: {fileID: 991595815}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Attack_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4337,7 +4403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052872179}
   - component: {fileID: 1052872180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spawn_TopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4737,7 +4803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310232271}
   - component: {fileID: 1310232272}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spawn_DownLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17166,6 +17232,8 @@ GameObject:
   - component: {fileID: 1817085735}
   - component: {fileID: 1817085734}
   - component: {fileID: 1817085736}
+  - component: {fileID: 1817085738}
+  - component: {fileID: 1817085737}
   m_Layer: 0
   m_Name: Nocto-1.png
   m_TagString: Untagged
@@ -17246,6 +17314,37 @@ MonoBehaviour:
   target: {fileID: 2008100752}
   speed: 10
   delay: 7
+--- !u!114 &1817085737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817085733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Nocto
+--- !u!114 &1817085738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817085733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec01b5617dfff4cbaed27d23a61074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Health: 1
+  Dead: {fileID: 0}
+  Hit: {fileID: 0}
+  Particle: {fileID: 0}
+  DoomTime: 20
+  DoomActive: 0
+  Alive: 0
 --- !u!1001 &1873042262
 Prefab:
   m_ObjectHideFlags: 0
