@@ -6,8 +6,9 @@ public class Doom : MonoBehaviour {
     public GameObject _Doom;
     private Rigidbody2D DoomRigid;
     public float Speed;
-    private bool direction;
+    public bool direction;
     public float cooldown;
+    public bool active;
 	// Use this for initialization
 	void Start () {
 
@@ -21,7 +22,7 @@ public class Doom : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(active)
         {
             if (cooldown <= 0)
             {
@@ -40,15 +41,6 @@ public class Doom : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            direction = false;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            direction = true;
-        }
-
     }
     void OnTriggerEnter2D(Collider2D Target)
     {

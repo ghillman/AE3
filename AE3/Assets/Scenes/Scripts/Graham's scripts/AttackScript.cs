@@ -89,7 +89,7 @@ public class AttackScript : MonoBehaviour {
             Particle.Play();
         if (Health > 0)
         {
-            Hit.SetTrigger("Hit");
+           // Hit.SetTrigger("Hit");
         }
     }
 }
