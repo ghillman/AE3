@@ -129,10 +129,14 @@
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\DieOnCollision.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\FireballScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Homing_Shot.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\KillOnCollision.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Ladder_Script.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\LavaJump.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Pause.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Sound.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Spawn_Homing.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\SpawnFireball.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Start_Script.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Statue_LevelManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Switch.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\TonysMovingPlatform.cs" />
