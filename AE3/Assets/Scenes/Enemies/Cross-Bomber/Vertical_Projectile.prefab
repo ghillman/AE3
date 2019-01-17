@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 58140803136278720}
   - component: {fileID: 114775843217348130}
   - component: {fileID: 114234435326303762}
-  m_Layer: 0
+  - component: {fileID: 114581388641180324}
+  m_Layer: 12
   m_Name: Vertical_Projectile
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +91,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5479faa86f7c2864ab801cc80d493eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114581388641180324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253327405733836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808d2ba8ce9f0d044bf1a3e165321aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Cross_Bomber_Projectile
 --- !u!114 &114775843217348130
 MonoBehaviour:
   m_ObjectHideFlags: 1
