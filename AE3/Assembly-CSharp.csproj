@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scenes\Enemies\Crazy Man\CrazyTalk.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\EmberAttack.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\FireBlobMovement.cs" />
+    <Compile Include="Assets\Scenes\Enemies\Necromancer(unfinished)\Necro_Script.cs" />
+    <Compile Include="Assets\Scenes\Enemies\Necromancer(unfinished)\ZombieWalk.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\DownwardDart.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\middleDart.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\SpiderScript.cs" />

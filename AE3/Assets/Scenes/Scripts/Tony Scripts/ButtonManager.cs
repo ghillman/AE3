@@ -2,10 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
     public GameObject Player;
+    //--------------------------------------------------------------MENU STUFF-------------------------------------------------------------------//
+
+    //can also add this to a button in the pause menu to skip a level
+    public void GameStart()
+    {
+        //load the next scene in the index
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void PauseGane()
+    {
+        Pause.GamePaused = true;
+    }
+
+    public void resume()
+    {
+        Pause.GamePaused = false;
+    }
+
+    public void KillCanvas()
+    {
+        Start_Script.KillMenu = true;
+    }
 
     //----------------------------------------------------------------MOVEMENT-----------------------------------------------------------------------------------//
 
