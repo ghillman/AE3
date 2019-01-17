@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scenes\Enemies\Crazy Man\CrazyTalk.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\EmberAttack.cs" />
     <Compile Include="Assets\Scenes\Enemies\Fire blob\FireBlobMovement.cs" />
+    <Compile Include="Assets\Scenes\Enemies\Necromancer(unfinished)\Necro_Script.cs" />
+    <Compile Include="Assets\Scenes\Enemies\Necromancer(unfinished)\ZombieWalk.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\DownwardDart.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\middleDart.cs" />
     <Compile Include="Assets\Scenes\Enemies\Spider\SpiderScript.cs" />
@@ -129,10 +131,14 @@
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\DieOnCollision.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\FireballScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Homing_Shot.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\KillOnCollision.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Ladder_Script.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\LavaJump.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Pause.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Sound.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Spawn_Homing.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\SpawnFireball.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Start_Script.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Statue_LevelManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\Switch.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tony Scripts\TonysMovingPlatform.cs" />
